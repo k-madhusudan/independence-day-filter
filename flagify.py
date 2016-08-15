@@ -10,21 +10,17 @@ from skimage import color
 #cam = data.camera()
 #print type(cam)
 #print cam.shape
-filename = os.path.join("/home/madhusudan/Programming/Python-For-Life/independence-day-filter","lena.png")
+#filename = os.path.join("/home/madhusudan/Programming/Python-For-Life/independence-day-filter","lena.png")
+filename = os.path.join (input(),input())
 lena = io.imread(filename)
-#print type(lena)
-#print lena.shape
 
 rgblena = rgb2gray(lena)
-print type(rgblena)
-print rgblena.shape
-
 lenaimg = img_as_float(rgblena)
 
 saffron_mult = [1,153.0/255.0,51/255.0]
 white_mult = [1,1,1]
 green_mult = [19.0/255,136.0/255,8.0/255]
-
+#green_mult = [19.0/255,100.0/255,8.0/255]
 lenacolor= color.gray2rgb(lenaimg)
 #io.imshow(lena,plugin=None)
 
@@ -34,6 +30,6 @@ lenacolor[(lenacolor.shape[0]/3)*2: (lenacolor.shape[0]/3)*3] = lenacolor[(lenac
 
 io.imshow(lenacolor, plugin=None)
 io.show()
-print rgblena.min(), rgblena.max()
+#print rgblena.min(), rgblena.max()
 #plt.imshow(lena)
 #plt.show()
