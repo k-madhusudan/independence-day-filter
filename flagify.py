@@ -14,8 +14,8 @@ from skimage import color
 filename = os.path.join (input(),input())
 lena = io.imread(filename)
 
-rgblena = rgb2gray(lena)
-lenaimg = img_as_float(rgblena)
+#rgblena = rgb2gray(lena)
+lenaimg = img_as_float(lena)
 
 saffron_mult = [1,153.0/255.0,51/255.0]
 white_mult = [1,1,1]
